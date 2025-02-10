@@ -1,0 +1,769 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-23 15:35:21.106297",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "systems_tab",
+  "language_and_format_section",
+  "system_language",
+  "date_format",
+  "time_format",
+  "number_format",
+  "first_day_of_the_week",
+  "column_break_weum",
+  "float_precision",
+  "currency_precision",
+  "rounding_method",
+  "login_section",
+  "apply_strict_user_permissions",
+  "enable_two_factor_auth",
+  "column_break_pkzp",
+  "allow_login_using_mobile_number",
+  "allow_login_using_user_name",
+  "email_section",
+  "email_footer_address",
+  "column_break_ibik",
+  "welcome_email_template",
+  "reset_password_template",
+  "backup_section",
+  "backup_limit",
+  "defaults_section",
+  "default_currency",
+  "hide_currency_symbol",
+  "column_break_mrlb",
+  "disable_rounded_total",
+  "disable_in_words",
+  "tab_2_tab",
+  "links_section",
+  "unlink_advance_payment_on_cancellation_of_order",
+  "allow_multi_currency_invoices_for_the_same_party",
+  "column_break_ekmj",
+  "delete_ledger_entries_on_transaction_deletion",
+  "deferred_account_section",
+  "book_deferred_entries_based_on",
+  "submit_journal_entries",
+  "column_break_gfrm",
+  "auto_process_deferred_accounting_entries",
+  "create_journal_entry_for_deferred_entries",
+  "payment_reconciliations_section",
+  "auto_reconcile_payments",
+  "credit_limit_section",
+  "overbilling_allowance",
+  "column_break_clte",
+  "role_for_overbilling",
+  "role_to_bypass_credit_limit",
+  "period_closing_section",
+  "accounts_frozen_till_date",
+  "ignore_closing_balances",
+  "column_break_jjdy",
+  "role_allow_to_edit_frozen_accounts_and_entries",
+  "sales_tab",
+  "customer_naming_by",
+  "column_break_agoi",
+  "default_sales_price_list",
+  "item_price_section",
+  "consistent_pricing_during_sales_cycle",
+  "validate_price_against_purchasevaluation_rates",
+  "allow_negative_item_rates",
+  "column_break_yygp",
+  "allow_editing_of_price_list_rates_in_transactions",
+  "calculate_bundle_price_from_its_item_rates",
+  "transactions_section",
+  "repeat_items_multiple_times_in_a_transaction",
+  "no_reservation_on_sales_returns",
+  "column_break_tuxp",
+  "sales_order_creation_for_expired_quotations",
+  "enable_discount_accounting",
+  "purchases_tab",
+  "naming_series_and_price_defaults_section",
+  "supplier_naming_style",
+  "default_purchase_price_list",
+  "rate_section",
+  "action_for_price_inconsistencies",
+  "column_break_frsp",
+  "override_stop_action_role",
+  "transactions_setting_section",
+  "consistent_pricing_during_purchase_cycle",
+  "billing_for_rejected_quantities",
+  "use_transaction_date_exchange_rate",
+  "column_break_huxe",
+  "repeat_item_multiple_times_in_purchase_transactions",
+  "disable_last_purchase_rate",
+  "inventory_tab",
+  "stock_defaults_section",
+  "item_naming_style",
+  "allow_negative_stock",
+  "column_break_bdov",
+  "default_valuation_method",
+  "show_barcode_field_in_transactions",
+  "reservation_section",
+  "enable_stock_reservations",
+  "enable_serialbatch_fields",
+  "column_break_qqoi",
+  "allow_partial_reservations",
+  "auto_reserve_serial_and_batch_numbers",
+  "invertory_transactions_section",
+  "auto_material_request_on_reorder_level",
+  "email_notification_for_auto_material_requests",
+  "stock_frozen_upto",
+  "column_break_fmww",
+  "freeze_older_stocks_days",
+  "role_for_backdated_transactions",
+  "assets_tab",
+  "assets_section",
+  "auto_book_asset_depreciation"
+ ],
+ "fields": [
+  {
+   "fieldname": "systems_tab",
+   "fieldtype": "Tab Break",
+   "label": "Systems"
+  },
+  {
+   "fieldname": "language_and_format_section",
+   "fieldtype": "Section Break",
+   "label": "Language And Format"
+  },
+  {
+   "fieldname": "system_language",
+   "fieldtype": "Link",
+   "label": "System Language",
+   "options": "Language",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_format",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Date Format",
+   "options": "yyyy-mm-dd\ndd-mm-yyyy\ndd/mm/yyyy\ndd.mm.yyyy\nmm/dd/yyyy\nmm-dd-yyyy",
+   "reqd": 1
+  },
+  {
+   "fieldname": "time_format",
+   "fieldtype": "Select",
+   "label": "Time Format",
+   "options": "HH:mm:ss\nHH:mm",
+   "reqd": 1
+  },
+  {
+   "fieldname": "number_format",
+   "fieldtype": "Select",
+   "label": "Number Format",
+   "options": "#,###.##\n#.###,##\n# ###.##\n# ###,##\n#'###.##\n#, ###.##\n#,##,###.##\n#,###.###\n#.###\n#,###",
+   "reqd": 1
+  },
+  {
+   "fieldname": "first_day_of_the_week",
+   "fieldtype": "Select",
+   "label": "First Day of the Week",
+   "options": "Sunday\nMonday\nTuesday\nWednesday\nThursday\nFriday\nSaturday"
+  },
+  {
+   "fieldname": "column_break_weum",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "float_precision",
+   "fieldtype": "Select",
+   "label": "Float Precision",
+   "options": "\n2\n3\n4\n5\n6\n7\n8\n9"
+  },
+  {
+   "fieldname": "currency_precision",
+   "fieldtype": "Select",
+   "label": "Currency Precision",
+   "options": "0\n1\n2\n3\n4\n5\n6\n7\n8\n9"
+  },
+  {
+   "fieldname": "rounding_method",
+   "fieldtype": "Select",
+   "label": "Rounding Method",
+   "options": "Banker's Rounding (legacy)\nBanker's Rounding\nCommercial Rounding"
+  },
+  {
+   "fieldname": "login_section",
+   "fieldtype": "Section Break",
+   "label": "Login"
+  },
+  {
+   "default": "0",
+   "description": "If Apply Strict User Permission is checked and User Permission is defined for a DocType for a User, then all the documents where value of the link is blank, will not be shown to that User",
+   "fieldname": "apply_strict_user_permissions",
+   "fieldtype": "Check",
+   "label": "Apply Strict User Permissions"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_two_factor_auth",
+   "fieldtype": "Check",
+   "label": " Enable Two Factor Auth"
+  },
+  {
+   "fieldname": "column_break_pkzp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "description": "User can login using Email id or Mobile number",
+   "fieldname": "allow_login_using_mobile_number",
+   "fieldtype": "Check",
+   "label": " Allow Login using Mobile Number"
+  },
+  {
+   "default": "0",
+   "description": "User can login using Email id or User Name",
+   "fieldname": "allow_login_using_user_name",
+   "fieldtype": "Check",
+   "label": " Allow Login using User Name"
+  },
+  {
+   "fieldname": "email_section",
+   "fieldtype": "Section Break",
+   "label": "Email"
+  },
+  {
+   "description": "Your organization name and address for the email footer.",
+   "fieldname": "email_footer_address",
+   "fieldtype": "Small Text",
+   "label": "Email Footer Address"
+  },
+  {
+   "fieldname": "column_break_ibik",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "welcome_email_template",
+   "fieldtype": "Link",
+   "label": "Welcome Email Template",
+   "options": "Email Template"
+  },
+  {
+   "fieldname": "reset_password_template",
+   "fieldtype": "Link",
+   "label": "Reset Password Template",
+   "options": "Email Template"
+  },
+  {
+   "fieldname": "backup_section",
+   "fieldtype": "Section Break",
+   "label": "Backup"
+  },
+  {
+   "fieldname": "backup_limit",
+   "fieldtype": "Int",
+   "label": "Backup Limit"
+  },
+  {
+   "fieldname": "defaults_section",
+   "fieldtype": "Section Break",
+   "label": "Defaults"
+  },
+  {
+   "fieldname": "default_currency",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Default Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "hide_currency_symbol",
+   "fieldtype": "Select",
+   "label": "Hide Currency Symbol",
+   "options": "No\nYes"
+  },
+  {
+   "fieldname": "column_break_mrlb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "description": "If disable, 'Rounded Total' field will not be visible in any transaction",
+   "fieldname": "disable_rounded_total",
+   "fieldtype": "Check",
+   "label": " Disable Rounded Total"
+  },
+  {
+   "default": "0",
+   "description": "If disable, 'In Words' field will not be visible in any transaction",
+   "fieldname": "disable_in_words",
+   "fieldtype": "Check",
+   "label": " Disable In Words"
+  },
+  {
+   "fieldname": "tab_2_tab",
+   "fieldtype": "Tab Break",
+   "label": "Accounting"
+  },
+  {
+   "fieldname": "links_section",
+   "fieldtype": "Section Break",
+   "label": "Links"
+  },
+  {
+   "default": "0",
+   "fieldname": "unlink_advance_payment_on_cancellation_of_order",
+   "fieldtype": "Check",
+   "label": "Unlink Advance Payment on Cancellation of Order"
+  },
+  {
+   "default": "0",
+   "description": "Enabling this will allow creation of multi-currency invoices against single party account in company currency",
+   "fieldname": "allow_multi_currency_invoices_for_the_same_party",
+   "fieldtype": "Check",
+   "label": "Allow multi-currency invoices for the same party"
+  },
+  {
+   "fieldname": "column_break_ekmj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "delete_ledger_entries_on_transaction_deletion",
+   "fieldtype": "Check",
+   "label": "Delete Ledger Entries on Transaction deletion"
+  },
+  {
+   "fieldname": "deferred_account_section",
+   "fieldtype": "Section Break",
+   "label": "Deferred Account"
+  },
+  {
+   "description": "Specifies the method for booking deferred accounting entries.",
+   "fieldname": "book_deferred_entries_based_on",
+   "fieldtype": "Select",
+   "label": "Book Deferred Entries Based On"
+  },
+  {
+   "default": "0",
+   "description": "Enables automatic submission of journal entries.\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t",
+   "fieldname": "submit_journal_entries",
+   "fieldtype": "Check",
+   "label": "Submit Journal Entries"
+  },
+  {
+   "fieldname": "column_break_gfrm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_process_deferred_accounting_entries",
+   "fieldtype": "Check",
+   "label": "Auto Process Deferred Accounting Entries"
+  },
+  {
+   "default": "0",
+   "description": "Books deferred entries via journal entries.",
+   "fieldname": "create_journal_entry_for_deferred_entries",
+   "fieldtype": "Check",
+   "label": "Create Journal Entry for Deferred Entries"
+  },
+  {
+   "fieldname": "payment_reconciliations_section",
+   "fieldtype": "Section Break",
+   "label": "Payment Reconciliations"
+  },
+  {
+   "default": "0",
+   "description": "Automatically reconciles payments with invoices.",
+   "fieldname": "auto_reconcile_payments",
+   "fieldtype": "Check",
+   "label": "Auto Reconcile Payments"
+  },
+  {
+   "fieldname": "credit_limit_section",
+   "fieldtype": "Section Break",
+   "label": "Credit Limit"
+  },
+  {
+   "default": "0",
+   "description": "The percentage of overbilling allowed for transactions.",
+   "fieldname": "overbilling_allowance",
+   "fieldtype": "Currency",
+   "label": "Overbilling Allowance (%)"
+  },
+  {
+   "fieldname": "column_break_clte",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Specifies roles allowed to overbill.",
+   "fieldname": "role_for_overbilling",
+   "fieldtype": "Link",
+   "label": "Role for Overbilling",
+   "options": "Role"
+  },
+  {
+   "description": "Specifies roles allowed to bypass customer credit limits.",
+   "fieldname": "role_to_bypass_credit_limit",
+   "fieldtype": "Link",
+   "label": "Role to Bypass Credit Limit",
+   "options": "Role"
+  },
+  {
+   "fieldname": "period_closing_section",
+   "fieldtype": "Section Break",
+   "label": "Period Closing"
+  },
+  {
+   "description": "Restricts changes to accounts before this date.",
+   "fieldname": "accounts_frozen_till_date",
+   "fieldtype": "Date",
+   "label": "Accounts Frozen Till Date"
+  },
+  {
+   "default": "0",
+   "description": "Ignores account closing balances in transactions.",
+   "fieldname": "ignore_closing_balances",
+   "fieldtype": "Check",
+   "label": "Ignore Closing Balances"
+  },
+  {
+   "fieldname": "column_break_jjdy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Specifies roles allowed to edit frozen accounts and entries.",
+   "fieldname": "role_allow_to_edit_frozen_accounts_and_entries",
+   "fieldtype": "Link",
+   "label": "Role Allow to Edit Frozen Accounts and Entries",
+   "options": "Role"
+  },
+  {
+   "fieldname": "sales_tab",
+   "fieldtype": "Tab Break",
+   "label": "Sales"
+  },
+  {
+   "fieldname": "customer_naming_by",
+   "fieldtype": "Select",
+   "label": "Customer Naming By",
+   "options": "Customer Name\nNaming Series\nAuto Name"
+  },
+  {
+   "fieldname": "column_break_agoi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "default_sales_price_list",
+   "fieldtype": "Link",
+   "label": "Default Sales Price List",
+   "options": "Price List"
+  },
+  {
+   "fieldname": "item_price_section",
+   "fieldtype": "Section Break",
+   "label": "Item Price"
+  },
+  {
+   "default": "0",
+   "fieldname": "consistent_pricing_during_sales_cycle",
+   "fieldtype": "Check",
+   "label": "Consistent Pricing During Sales Cycle"
+  },
+  {
+   "default": "0",
+   "fieldname": "validate_price_against_purchasevaluation_rates",
+   "fieldtype": "Check",
+   "label": "Validate Price Against Purchase/Valuation Rates"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_negative_item_rates",
+   "fieldtype": "Check",
+   "label": "Allow Negative Item Rates"
+  },
+  {
+   "fieldname": "column_break_yygp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_editing_of_price_list_rates_in_transactions",
+   "fieldtype": "Check",
+   "label": "Allow Editing of Price List Rates in Transactions"
+  },
+  {
+   "default": "0",
+   "fieldname": "calculate_bundle_price_from_its_item_rates",
+   "fieldtype": "Check",
+   "label": "Calculate Bundle Price from Its Item Rates"
+  },
+  {
+   "fieldname": "transactions_section",
+   "fieldtype": "Section Break",
+   "label": "Transactions"
+  },
+  {
+   "default": "0",
+   "fieldname": "repeat_items_multiple_times_in_a_transaction",
+   "fieldtype": "Check",
+   "label": "Repeat Items Multiple Times in a Transaction"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_reservation_on_sales_returns",
+   "fieldtype": "Check",
+   "label": "No Reservation on Sales Returns"
+  },
+  {
+   "fieldname": "column_break_tuxp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "sales_order_creation_for_expired_quotations",
+   "fieldtype": "Check",
+   "label": "Sales Order Creation for Expired Quotations"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_discount_accounting",
+   "fieldtype": "Check",
+   "label": "Enable Discount Accounting"
+  },
+  {
+   "fieldname": "purchases_tab",
+   "fieldtype": "Tab Break",
+   "label": "Purchases"
+  },
+  {
+   "fieldname": "naming_series_and_price_defaults_section",
+   "fieldtype": "Section Break",
+   "label": "Naming Series and Price Defaults"
+  },
+  {
+   "fieldname": "supplier_naming_style",
+   "fieldtype": "Select",
+   "label": "Supplier Naming Style",
+   "options": "Supplier Name\nNaming Series\nAuto Name"
+  },
+  {
+   "fieldname": "default_purchase_price_list",
+   "fieldtype": "Link",
+   "label": "Default Purchase Price List",
+   "options": "Price List"
+  },
+  {
+   "fieldname": "rate_section",
+   "fieldtype": "Section Break",
+   "label": "Rate"
+  },
+  {
+   "fieldname": "action_for_price_inconsistencies",
+   "fieldtype": "Select",
+   "label": "Action for Price Inconsistencies",
+   "options": "Stop\nWarn"
+  },
+  {
+   "fieldname": "column_break_frsp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "override_stop_action_role",
+   "fieldtype": "Link",
+   "label": "Override Stop Action Role",
+   "options": "Role"
+  },
+  {
+   "fieldname": "transactions_setting_section",
+   "fieldtype": "Section Break",
+   "label": "Transactions Setting"
+  },
+  {
+   "default": "0",
+   "fieldname": "consistent_pricing_during_purchase_cycle",
+   "fieldtype": "Check",
+   "label": "Consistent Pricing During Purchase Cycle"
+  },
+  {
+   "default": "0",
+   "description": "Permits billing for rejected quantities in purchase invoices.",
+   "fieldname": "billing_for_rejected_quantities",
+   "fieldtype": "Check",
+   "label": "Billing for Rejected Quantities"
+  },
+  {
+   "default": "0",
+   "description": "Uses the exchange rate on the transaction date.",
+   "fieldname": "use_transaction_date_exchange_rate",
+   "fieldtype": "Check",
+   "label": "Use Transaction Date Exchange Rate"
+  },
+  {
+   "fieldname": "column_break_huxe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "repeat_item_multiple_times_in_purchase_transactions",
+   "fieldtype": "Check",
+   "label": "Repeat Item Multiple Times in Purchase Transactions"
+  },
+  {
+   "default": "0",
+   "fieldname": "disable_last_purchase_rate",
+   "fieldtype": "Check",
+   "label": "Disable Last Purchase Rate"
+  },
+  {
+   "fieldname": "inventory_tab",
+   "fieldtype": "Tab Break",
+   "label": "Inventory"
+  },
+  {
+   "fieldname": "stock_defaults_section",
+   "fieldtype": "Section Break",
+   "label": "Stock Defaults"
+  },
+  {
+   "default": "Item Code",
+   "fieldname": "item_naming_style",
+   "fieldtype": "Select",
+   "label": "Item Naming Style",
+   "options": "Item Code\nNaming Series"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_negative_stock",
+   "fieldtype": "Check",
+   "label": "Allow Negative Stock"
+  },
+  {
+   "fieldname": "column_break_bdov",
+   "fieldtype": "Column Break"
+  },
+  {
+   "documentation_url": "https://docs.erpnext.com/docs/v14/user/manual/en/stock/articles/calculation-of-valuation-rate-in-fifo-and-moving-average",
+   "fieldname": "default_valuation_method",
+   "fieldtype": "Select",
+   "label": "Default Valuation Method",
+   "options": "FIFO\nMoving Average\nLIFO"
+  },
+  {
+   "default": "0",
+   "fieldname": "show_barcode_field_in_transactions",
+   "fieldtype": "Check",
+   "label": "Show Barcode Field in Transactions"
+  },
+  {
+   "fieldname": "reservation_section",
+   "fieldtype": "Section Break",
+   "label": "Reservation"
+  },
+  {
+   "default": "0",
+   "description": "Allows reserving stock for specific orders.",
+   "fieldname": "enable_stock_reservations",
+   "fieldtype": "Check",
+   "label": "Enable Stock Reservations"
+  },
+  {
+   "default": "0",
+   "description": "Activates serial and batch fields in transactions.",
+   "fieldname": "enable_serialbatch_fields",
+   "fieldtype": "Check",
+   "label": "Enable Serial/Batch Fields"
+  },
+  {
+   "fieldname": "column_break_qqoi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "description": "Permits reserving partial quantities of stock.",
+   "fieldname": "allow_partial_reservations",
+   "fieldtype": "Check",
+   "label": "Allow Partial Reservations"
+  },
+  {
+   "default": "0",
+   "description": "Automatically reserves serial and batch numbers.",
+   "fieldname": "auto_reserve_serial_and_batch_numbers",
+   "fieldtype": "Check",
+   "label": "Auto Reserve Serial and Batch Numbers"
+  },
+  {
+   "fieldname": "invertory_transactions_section",
+   "fieldtype": "Section Break",
+   "label": "Invertory Transactions"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_material_request_on_reorder_level",
+   "fieldtype": "Check",
+   "label": "Auto Material Request on Reorder Level"
+  },
+  {
+   "default": "0",
+   "fieldname": "email_notification_for_auto_material_requests",
+   "fieldtype": "Check",
+   "label": "Email Notification for Auto Material Requests"
+  },
+  {
+   "description": "Prevents changes to stock before this date.",
+   "fieldname": "stock_frozen_upto",
+   "fieldtype": "Date",
+   "label": "Stock Frozen Upto"
+  },
+  {
+   "fieldname": "column_break_fmww",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Freezes stocks older than a specified number of days.",
+   "fieldname": "freeze_older_stocks_days",
+   "fieldtype": "Int",
+   "label": "Freeze Older Stocks (Days)"
+  },
+  {
+   "description": "Specifies roles allowed to create or edit backdated transactions in the system.",
+   "fieldname": "role_for_backdated_transactions",
+   "fieldtype": "Link",
+   "label": "Role for Backdated Transactions",
+   "options": "Role"
+  },
+  {
+   "fieldname": "assets_tab",
+   "fieldtype": "Tab Break",
+   "label": "Assets"
+  },
+  {
+   "fieldname": "assets_section",
+   "fieldtype": "Section Break",
+   "label": "Assets"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_book_asset_depreciation",
+   "fieldtype": "Check",
+   "label": "Auto Book Asset Depreciation"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-02-11 00:09:27.097315",
+ "modified_by": "Administrator",
+ "module": "dox-new",
+ "name": "Dox Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
